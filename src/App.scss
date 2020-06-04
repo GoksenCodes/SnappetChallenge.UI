@@ -1,0 +1,31 @@
+@import "./style/config";
+@import "./style/reset";
+
+@function weight($weight-name) {
+  @return map-get($font-weight, $weight-name);
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+body {
+  color: $text-color;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: weight(medium);
+}
