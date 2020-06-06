@@ -14,9 +14,18 @@ export default function ListDetails(props) {
       <td>
         <p>{props.title}</p>
       </td>
-      <p>
-        <Pupils />
-      </p>
+      <td>
+        {pupils.map((pupil, num) => {
+          return (
+            <Pupils
+              key={num}
+              completed={pupil.completed}
+              inprogress={pupil.inprogress}
+              notstarted={pupil.notstarted}
+            />
+          );
+        })}
+      </td>
       <td>
         <p></p>
       </td>
