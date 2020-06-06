@@ -146,7 +146,7 @@ export default function List() {
       >
         {uniqueGrades.map(uniqueGrade => {
           return (
-            <option value={uniqueGrade} key={uniqueGrade}>
+            <option value={uniqueGrade} key={uniqueGrade} selected>
               Math Grade {uniqueGrade}
             </option>
           );
