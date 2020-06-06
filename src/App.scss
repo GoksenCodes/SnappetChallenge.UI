@@ -23,6 +23,10 @@
   }
 }
 
+.App {
+  background: $light;
+  min-height: 100vh;
+}
 body {
   color: $text-color;
   font-family: "Quicksand", sans-serif;
@@ -43,7 +47,7 @@ body {
 
   &__menu {
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 1rem;
 
     &__item {
       display: inline;
@@ -52,7 +56,6 @@ body {
     }
   }
   &__title {
-    padding-top: 1rem;
     text-align: center;
 
     &__icon {
@@ -65,4 +68,13 @@ body {
       }
     }
   }
+}
+.container {
+  background: $default;
+  width: 90%;
+  height: 200px;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  margin-top: -40px;
 }

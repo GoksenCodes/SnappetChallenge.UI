@@ -4,6 +4,7 @@ import "./App.scss";
 import { Switch, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import { BrowserRouter as Router } from "react-router-dom";
+import List from "../src/components/List/index";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route exact path="/" />
           </Switch>
         </Router>
+        <List />
       </div>
     </div>
   );
