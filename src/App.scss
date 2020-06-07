@@ -32,6 +32,10 @@ body {
   color: $default;
   font-weight: weight(bold);
 
+  @include mobile {
+    height: 120px;
+  }
+
   &__breadcrumb {
     text-align: center;
     padding-top: 1.5rem;
@@ -48,6 +52,7 @@ body {
   }
   &__title {
     text-align: center;
+    font-size: 2.5rem;
 
     & svg {
       width: 50px;
@@ -56,6 +61,15 @@ body {
       fill: #fff;
       margin-right: 10px;
       vertical-align: bottom;
+    }
+    @include mobile {
+      font-size: 1.5rem;
+
+      & svg {
+        width: 30px;
+        height: 30px;
+        margin-right: 2px;
+      }
     }
   }
 }
@@ -68,6 +82,12 @@ body {
   border-radius: 0.5em;
   margin-top: -40px;
   padding: 30px;
+  box-shadow: $box-shadow;
+
+  @include mobile {
+    width: 95%;
+    margin-top: -30px;
+  }
 }
 
 .main {
@@ -80,9 +100,22 @@ body {
 
   &__group {
     display: flex;
+    justify-content: space-between;
+    @include mobile {
+      &:last-child {
+        flex-direction: column;
+        padding-top: $padding-m;
+      }
+    }
+  }
+  @include mobile {
+    flex-direction: column;
   }
 }
 
 .spacer {
   margin-left: 10px;
+  @include mobile {
+    margin-left: 0;
+  }
 }
