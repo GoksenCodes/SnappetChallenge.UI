@@ -11,10 +11,13 @@
   color: $primary;
   font-weight: weight(bold);
 
-  &__icon {
-    width: 30px;
-    height: 30px;
+  & svg {
+    width: 20px;
+    height: 20px;
     display: inline-block;
+    fill: #fff;
+    margin-left: 5px;
+    vertical-align: bottom;
   }
 
   &__primary {

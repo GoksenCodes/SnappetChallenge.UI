@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import ListDetails from "./ListDetails";
-import balls from "../assets/icons/balls.svg";
-import person from "../assets/icons/person.svg";
-import plus from "../assets/icons/plus.svg";
-import refresh from "../assets/icons/refresh.svg";
+import { ReactComponent as IconBalls } from "../assets/icons/balls.svg";
+import { ReactComponent as IconPerson } from "../assets/icons/person.svg";
+import { ReactComponent as IconPlus } from "../assets/icons/plus.svg";
+import { ReactComponent as IconRefresh } from "../assets/icons/refresh.svg";
 
 export default function List() {
   const allLearningObjs = [
@@ -143,18 +143,10 @@ export default function List() {
       <div className="controls">
         <ul class="controls__pills">
           <li class="controls__pills__item active">
-            <img
-              className="controls__pills__item__icon"
-              src={balls}
-              alt="connected-balls-icon"
-            />
+            <IconBalls />
           </li>
           <li class="controls__pills__item">
-            <img
-              className="controls__pills__item__icon"
-              src={person}
-              alt="person-icon"
-            />
+            <IconPerson />
           </li>
         </ul>
         <div className="dropdown">
@@ -176,11 +168,11 @@ export default function List() {
         </div>
         <button className="btn__primary">
           Add learning objective
-          <img className="btn__icon" src={plus} alt="plus icon" />
+          <IconPlus />
         </button>
         <button className="btn__warning">
           Automatic update
-          <img className="btn__icon" src={refresh} alt="refresh icon" />
+          <IconRefresh />
         </button>
       </div>
       <div>
