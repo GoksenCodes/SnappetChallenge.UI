@@ -90,7 +90,7 @@ export default function List() {
       id: 123,
       grade: 5,
       no: 123,
-      title: " Doortelen en terugtelen met spr...",
+      title: " Doortelen en terugtelen met sprongen van 3 of meer dan",
       pupils: [
         {
           completed: 16,
@@ -103,7 +103,7 @@ export default function List() {
       id: 201,
       grade: 5,
       no: 201,
-      title: "Splitsend vermenigvuldigen (6 x 32 =...)",
+      title: "Splitsend vermenigvuldigen (6 x 32 = 6837) En nog meer rek",
       pupils: [
         {
           completed: 3,
@@ -116,7 +116,7 @@ export default function List() {
       id: 123,
       grade: 5,
       no: 123,
-      title: " Doortelen en terugtelen met spr...",
+      title: " Doortelen en terugtelen met sprongen meer dan 1,2,4 en 6",
       pupils: [
         {
           completed: 3,
@@ -185,8 +185,10 @@ export default function List() {
         <table className="table">
           <thead>
             <tr>
-              <th></th>
-              <th className="table__title">Learning Objective</th>
+              <th className="table__title">
+                Learning Objective
+                <IconDown />
+              </th>
               <th className="table__pupil">Pupils</th>
               <th className="table__button"></th>
             </tr>

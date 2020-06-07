@@ -10,30 +10,51 @@
   border: none;
   font-weight: weight(bold);
 
+  tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color;
+  }
+
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+
   th {
     text-align: left;
-    border-bottom: 1px solid $border-color;
+    padding: 30px 0 5px 0;
+
+    & svg {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-left: 5px;
+      vertical-align: text-bottom;
+    }
   }
 
   td {
     font-weight: weight(bold);
-    border-bottom: 1px solid $border-color;
-  }
-
-  &__id {
-    padding: 30px 3px 30px 0;
-  }
-
-  &__pupil {
-    padding: 30px 0 30px 50px;
+    padding: 30px 0 30px 0;
   }
 
   &__title {
-    padding: 30px 0 30px 0;
+    overflow: hidden;
+    //white-space: nowrap;
+    width: 40%;
+
+    p {
+      text-overflow: ellipsis;
+    }
   }
+
+  &__pupil {
+    width: 35%;
+  }
+
   &__button {
-    padding: 30px 0 30px 90px;
-    // display: flex;
-    // justify-content: right;
+    // width: 20%;
+    min-width: 130px;
   }
 }

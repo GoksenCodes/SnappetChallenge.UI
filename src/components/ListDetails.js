@@ -8,11 +8,10 @@ export default function ListDetails(props) {
 
   return (
     <tr>
-      <td className="table__id">
-        <p className="table__id__content">{props.id}. </p>
-      </td>
       <td className="table__title">
-        <p className="table__title__content">{props.title}</p>
+        <p className="table__title__content">
+          {props.id}. {props.title}
+        </p>
       </td>
       <td className="table__pupil">
         {pupils.map((pupil, num) => {
@@ -26,7 +25,7 @@ export default function ListDetails(props) {
           );
         })}
       </td>
-      <td>
+      <td className="table__button">
         <button className="btn">Show Details</button>
       </td>
     </tr>
