@@ -7,9 +7,10 @@
   background: $default;
   border: 1px solid $border-color;
   box-shadow: $box-shadow;
-  border-radius: 0.2em;
+  border-radius: $border-radius;
   color: $primary;
   font-weight: weight(bold);
+  font-family: "Quicksand", sans-serif;
 
   & svg {
     width: 20px;

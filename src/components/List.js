@@ -166,11 +166,11 @@ export default function List() {
             })}
           </select>
         </div>
-        <button className="btn__primary">
+        <button className="btn btn__primary">
           Add learning objective
           <IconPlus />
         </button>
-        <button className="btn__warning">
+        <button className="btn btn__warning">
           Automatic update
           <IconRefresh />
         </button>
