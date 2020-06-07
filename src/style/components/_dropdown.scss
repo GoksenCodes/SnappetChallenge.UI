@@ -1,4 +1,4 @@
-@import "./style/config";
+@import "../config";
 @import "./button";
 
 .dropdown {
@@ -10,8 +10,8 @@
   position: relative;
 
   & svg {
-    width: 20px;
-    height: 20px;
+    width: $icon-size-d;
+    height: $icon-size-d;
     display: inline-block;
     margin-right: 15px;
     margin-left: 5px;
@@ -19,14 +19,45 @@
     position: absolute;
     top: 15px;
     right: 0;
+
+    @include tablet {
+      top: 10px;
+      width: $icon-size-t;
+      height: $icon-size-t;
+      margin-right: 10px;
+    }
+
+    @include mobile {
+      top: $padding-m;
+      width: $icon-size-m;
+      height: $icon-size-m;
+      margin-right: $padding-m;
+    }
   }
 
   &__custom-select {
     border: none;
     appearance: none;
     background: transparent;
-    padding: 15px 45px 15px 15px;
-    font-size: 1rem;
+    padding: $padding-d;
+    padding-right: 45px;
+    font-size: $font-size-d;
     font-family: "Quicksand", sans-serif;
+
+    @include tablet {
+      padding: $padding-t;
+      padding-right: 30px;
+      font-size: $font-size-t;
+    }
+
+    @include mobile {
+      padding: $padding-m;
+      padding-right: 15px;
+      width: 100%;
+      font-size: $font-size-m;
+    }
+  }
+  @include mobile {
+    width: 65%;
   }
 }

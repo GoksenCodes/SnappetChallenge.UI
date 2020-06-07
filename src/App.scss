@@ -6,28 +6,6 @@
 @import "./style/components/button";
 @import "./style/components/pupil";
 
-@function weight($weight-name) {
-  @return map-get($font-weight, $weight-name);
-}
-
-@mixin mobile {
-  @media (max-width: $mobile) {
-    @content;
-  }
-}
-
-@mixin mobile {
-  @media (max-width: $tablet) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (max-width: $desktop) {
-    @content;
-  }
-}
-
 .App {
   background: $light;
   min-height: 100vh;
@@ -35,11 +13,15 @@
 body {
   color: $text-color;
   font-family: "Quicksand", sans-serif;
-  font-size: 1rem;
+  font-size: $font-size-d;
   font-weight: weight(medium);
 
-  h1 {
-    font-size: 2.5rem;
+  @include tablet {
+    font-size: $font-size-t;
+  }
+
+  @include mobile {
+    font-size: $font-size-m;
   }
 }
 

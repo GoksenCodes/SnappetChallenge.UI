@@ -19,3 +19,37 @@ $font-weight: (
 $mobile: 544px;
 $tablet: 786px;
 $desktop: 1280px;
+
+$padding-d: 15px;
+$padding-t: 12px;
+$padding-m: 10px;
+
+$icon-size-d: 20px;
+$icon-size-t: 15px;
+$icon-size-m: 15px;
+
+$font-size-d: 1rem;
+$font-size-t: 0.8rem;
+$font-size-m: 0.8rem;
+
+@function weight($weight-name) {
+  @return map-get($font-weight, $weight-name);
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
