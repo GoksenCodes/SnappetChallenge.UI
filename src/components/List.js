@@ -127,7 +127,7 @@ export default function List() {
     }
   ];
 
-  const [selectedGrade, setSelectedGrade] = useState("");
+  const [selectedGrade, setSelectedGrade] = useState(5);
 
   const mathGrades = allLearningObjs.map(mathGrade => mathGrade.grade);
   console.log(mathGrades);
