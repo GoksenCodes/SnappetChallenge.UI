@@ -1,3 +1,23 @@
+@import "./style/config";
+
 .btn {
   display: inline-block;
+  padding: 15px;
+  font-size: 1rem;
+  background: $default;
+  border: 1px solid $border-color;
+  box-shadow: $box-shadow;
+  border-radius: 0.2em;
+  color: $primary;
+  font-weight: weight(bold);
+
+  &__primary {
+    color: $default;
+    background: $primary;
+  }
+
+  &__warning {
+    color: $default;
+    background: $warning;
+  }
 }
