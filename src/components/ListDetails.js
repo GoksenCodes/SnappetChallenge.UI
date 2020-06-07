@@ -26,7 +26,7 @@ export default function ListDetails(props) {
           );
         })}
       </td>
-      <td className="table__button">
+      <td>
         <button className="btn">Show Details</button>
       </td>
     </tr>

@@ -11,6 +11,12 @@
   color: $primary;
   font-weight: weight(bold);
 
+  &__icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+  }
+
   &__primary {
     color: $default;
     background: $primary;

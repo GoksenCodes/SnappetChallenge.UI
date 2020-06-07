@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ListDetails from "./ListDetails";
 import balls from "../assets/icons/balls.svg";
 import person from "../assets/icons/person.svg";
+import plus from "../assets/icons/plus.svg";
+import refresh from "../assets/icons/refresh.svg";
 
 export default function List() {
   const allLearningObjs = [
@@ -172,8 +174,14 @@ export default function List() {
             })}
           </select>
         </div>
-        <button className="btn__primary">Add learning objective</button>
-        <button className="btn__warning">Automatic update</button>
+        <button className="btn__primary">
+          Add learning objective
+          <img className="btn__icon" src={plus} alt="plus icon" />
+        </button>
+        <button className="btn__warning">
+          Automatic update
+          <img className="btn__icon" src={refresh} alt="refresh icon" />
+        </button>
       </div>
       <div>
         <table className="table">
