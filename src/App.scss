@@ -84,8 +84,15 @@ body {
   padding: 30px;
 }
 
+.main {
+  width: 100%;
+}
+
 .controls {
   display: flex;
-  flex-wrap: wrap;
-  text-align: center;
+  justify-content: space-between;
+}
+
+.spacer {
+  margin-left: 10px;
 }

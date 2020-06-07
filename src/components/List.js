@@ -141,39 +141,43 @@ export default function List() {
   return (
     <div className="main">
       <div className="controls">
-        <ul class="controls__pills">
-          <li class="controls__pills__item active">
-            <IconBalls />
-          </li>
-          <li class="controls__pills__item">
-            <IconPerson />
-          </li>
-        </ul>
-        <div className="dropdown">
-          <select
-            className="dropdown__custom-select"
-            onChange={e => {
-              setSelectedGrade(e.target.value);
-              console.log("TARGET at select", e.target.value);
-            }}
-          >
-            {uniqueGrades.map(uniqueGrade => {
-              return (
-                <option value={uniqueGrade} key={uniqueGrade} selected>
-                  Math Grade {uniqueGrade}
-                </option>
-              );
-            })}
-          </select>
+        <div className="controls__group">
+          <ul class="controls__pills">
+            <li class="controls__pills__item active">
+              <IconBalls />
+            </li>
+            <li class="controls__pills__item">
+              <IconPerson />
+            </li>
+          </ul>
+          <div className="dropdown spacer">
+            <select
+              className="dropdown__custom-select"
+              onChange={e => {
+                setSelectedGrade(e.target.value);
+                console.log("TARGET at select", e.target.value);
+              }}
+            >
+              {uniqueGrades.map(uniqueGrade => {
+                return (
+                  <option value={uniqueGrade} key={uniqueGrade} selected>
+                    Math Grade {uniqueGrade}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
         </div>
-        <button className="btn btn__primary">
-          Add learning objective
-          <IconPlus />
-        </button>
-        <button className="btn btn__warning">
-          Automatic update
-          <IconRefresh />
-        </button>
+        <div className="controls__group">
+          <button className="btn btn__primary">
+            Add learning objective
+            <IconPlus />
+          </button>
+          <button className="btn btn__warning spacer">
+            Automatic update
+            <IconRefresh />
+          </button>
+        </div>
       </div>
       <div>
         <table className="table">
