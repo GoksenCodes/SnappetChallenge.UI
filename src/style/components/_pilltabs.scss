@@ -1,4 +1,4 @@
-@import "./style/config";
+@import "../config";
 
 .controls__pills {
   list-style: none;
@@ -7,7 +7,7 @@
   &__item {
     border: 1px solid $border-color;
     background: $default;
-    padding: 10px;
+    padding: $padding-d;
     box-shadow: $box-shadow;
 
     &:first-child {
@@ -22,9 +22,31 @@
     }
 
     & svg {
-      width: 30px;
-      height: 30px;
+      width: $icon-size-d;
+      height: $icon-size-d;
       display: block;
+
+      @include tablet {
+        width: $icon-size-t;
+        height: $icon-size-t;
+      }
+
+      @include mobile {
+        width: $icon-size-m;
+        height: $icon-size-m;
+      }
     }
+
+    @include tablet {
+      padding: $padding-t;
+    }
+
+    @include mobile {
+      padding: $padding-m;
+    }
+  }
+  @include mobile {
+    width: 30%;
+    margin-right: 5%;
   }
 }

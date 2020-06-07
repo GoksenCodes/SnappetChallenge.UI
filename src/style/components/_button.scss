@@ -1,9 +1,7 @@
-@import "./style/config";
+@import "../config";
 
 .btn {
   display: inline-block;
-  padding: 15px;
-  font-size: 1rem;
   background: $default;
   border: 1px solid $border-color;
   box-shadow: $box-shadow;
@@ -13,14 +11,41 @@
   font-family: "Quicksand", sans-serif;
   overflow: hidden;
   white-space: nowrap;
+  position: relative;
+
+  font-size: $font-size-d;
+  padding: $padding-d;
+
+  @include tablet {
+    font-size: $font-size-t;
+    padding: $padding-t;
+  }
+
+  @include mobile {
+    font-size: $font-size-m;
+    padding: $padding-m;
+  }
 
   & svg {
-    width: 20px;
-    height: 20px;
+    width: $icon-size-d;
+    height: $icon-size-d;
     display: inline-block;
     fill: #fff;
     margin-left: 5px;
-    vertical-align: bottom;
+    vertical-align: middle;
+
+    @include tablet {
+      width: $icon-size-t;
+      height: $icon-size-t;
+    }
+
+    @include mobile {
+      width: $icon-size-m;
+      height: $icon-size-m;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
   }
 
   &__primary {
