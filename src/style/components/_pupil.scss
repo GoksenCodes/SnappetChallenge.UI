@@ -1,4 +1,4 @@
-@import "./style/config";
+@import "../config";
 
 .pupil {
   height: 15px;
@@ -15,5 +15,15 @@
   }
   &__notstarted {
     background-color: #fde342;
+  }
+
+  @include tablet {
+    height: 12px;
+    width: 12px;
+  }
+
+  @include mobile {
+    height: 12px;
+    width: 12px;
   }
 }
