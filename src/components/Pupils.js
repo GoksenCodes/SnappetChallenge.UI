@@ -18,5 +18,5 @@ export default function Pupils(props) {
     pupils.push(<span className="pupil__notstarted">Z</span>);
   }
 
-  return <p>{pupils.map(a => a)}</p>;
+  return <p className="table__pupil__content">{pupils.map(a => a)}</p>;
 }

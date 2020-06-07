@@ -1,5 +1,6 @@
 @import "./style/config";
 @import "./style/reset";
+@import "./style/components/table";
 
 @function weight($weight-name) {
   @return map-get($font-weight, $weight-name);
@@ -72,7 +73,7 @@ body {
 .container {
   background: $default;
   width: 90%;
-  height: 200px;
+  height: 600px;
   display: flex;
   margin: 0 auto;
   border-radius: 0.5em;

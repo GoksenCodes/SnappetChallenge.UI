@@ -10,9 +10,9 @@ export default function List() {
       title: "Whole Number: Addition & Subtraction",
       pupils: [
         {
-          completed: 3,
-          inprogress: 34,
-          notstarted: 3
+          completed: 16,
+          inprogress: 20,
+          notstarted: 4
         }
       ]
     },
@@ -62,8 +62,8 @@ export default function List() {
       title: "Addition and Subtraction",
       pupils: [
         {
-          completed: 3,
-          inprogress: 34,
+          completed: 6,
+          inprogress: 31,
           notstarted: 3
         }
       ]
@@ -75,9 +75,9 @@ export default function List() {
       title: "Fractions and Decimals",
       pupils: [
         {
-          completed: 3,
+          completed: 5,
           inprogress: 34,
-          notstarted: 3
+          notstarted: 1
         }
       ]
     },
@@ -97,7 +97,7 @@ export default function List() {
     {
       id: 201,
       grade: 5,
-      id: 201,
+      no: 201,
       title: "Splitsend vermenigvuldigen (6 x 32 =...)",
       pupils: [
         {
@@ -114,9 +114,9 @@ export default function List() {
       title: " Doortelen en terugtelen met spr...",
       pupils: [
         {
-          completed: 3,
-          inprogress: 34,
-          notstarted: 3
+          completed: 10,
+          inprogress: 25,
+          notstarted: 5
         }
       ]
     }
@@ -153,13 +153,13 @@ export default function List() {
         })}
       </select>
       <div>
-        <table>
+        <table className="table">
           <thead>
             <tr>
               <th></th>
-              <th>Learning Objective</th>
-              <th>Pupils</th>
-              <th></th>
+              <th className="table__title">Learning Objective</th>
+              <th className="table__pupil">Pupils</th>
+              <th className="table__button"></th>
             </tr>
           </thead>
           <tbody>

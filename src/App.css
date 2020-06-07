@@ -6,6 +6,25 @@
   padding: 0;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+th,
+td {
+  border: none;
+}
+
 .App {
   background: #f2f5f7;
   min-height: 100vh;
