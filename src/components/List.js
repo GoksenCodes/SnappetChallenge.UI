@@ -90,9 +90,9 @@ export default function List() {
       title: " Doortelen en terugtelen met spr...",
       pupils: [
         {
-          completed: 3,
-          inprogress: 34,
-          notstarted: 3
+          completed: 16,
+          inprogress: 24,
+          notstarted: 0
         }
       ]
     },
@@ -112,13 +112,13 @@ export default function List() {
     {
       id: 123,
       grade: 5,
-      no: 124,
+      no: 123,
       title: " Doortelen en terugtelen met spr...",
       pupils: [
         {
-          completed: 10,
-          inprogress: 25,
-          notstarted: 5
+          completed: 3,
+          inprogress: 34,
+          notstarted: 3
         }
       ]
     }
