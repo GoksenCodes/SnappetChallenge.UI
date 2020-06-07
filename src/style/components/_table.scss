@@ -1,5 +1,9 @@
 @import "./style/config";
 
+@function weight($weight-name) {
+  @return map-get($font-weight, $weight-name);
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;

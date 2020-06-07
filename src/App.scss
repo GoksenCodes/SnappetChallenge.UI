@@ -91,6 +91,10 @@ body {
 .controls {
   display: flex;
   justify-content: space-between;
+
+  &__group {
+    display: flex;
+  }
 }
 
 .spacer {

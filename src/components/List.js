@@ -4,6 +4,7 @@ import { ReactComponent as IconBalls } from "../assets/icons/balls.svg";
 import { ReactComponent as IconPerson } from "../assets/icons/person.svg";
 import { ReactComponent as IconPlus } from "../assets/icons/plus.svg";
 import { ReactComponent as IconRefresh } from "../assets/icons/refresh.svg";
+import { ReactComponent as IconDown } from "../assets/icons/down.svg";
 
 export default function List() {
   const allLearningObjs = [
@@ -166,6 +167,7 @@ export default function List() {
                 );
               })}
             </select>
+            <IconDown />
           </div>
         </div>
         <div className="controls__group">
