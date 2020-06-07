@@ -4,6 +4,7 @@
 @import "./style/components/pilltabs";
 @import "./style/components/dropdown";
 @import "./style/components/button";
+@import "./style/components/pupil";
 
 @function weight($weight-name) {
   @return map-get($font-weight, $weight-name);

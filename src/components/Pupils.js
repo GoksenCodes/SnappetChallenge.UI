@@ -7,16 +7,16 @@ export default function Pupils(props) {
 
   const pupils = [];
   for (let i = 0; i < completedPupils; i++) {
-    pupils.push(<span className="pupil__completed">X</span>);
+    pupils.push(<span className="pupil pupil__completed"></span>);
   }
 
   for (let i = 0; i < inprogressPupils; i++) {
-    pupils.push(<span className="pupil__inrpogress">Y</span>);
+    pupils.push(<span className="pupil pupil__inprogress"></span>);
   }
 
   for (let i = 0; i < notstartedPupils; i++) {
-    pupils.push(<span className="pupil__notstarted">Z</span>);
+    pupils.push(<span className="pupil pupil__notstarted"></span>);
   }
 
-  return <p className="table__pupil__content">{pupils.map(a => a)}</p>;
+  return <div>{pupils.map(a => a)}</div>;
 }
