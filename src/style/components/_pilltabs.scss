@@ -2,12 +2,12 @@
 
 .controls__pills {
   list-style: none;
+  display: flex;
 
   &__item {
-    display: inline-block;
     border: 1px solid $border-color;
     background: $default;
-    padding: 5px;
+    padding: 10px;
     box-shadow: $box-shadow;
 
     &:first-child {

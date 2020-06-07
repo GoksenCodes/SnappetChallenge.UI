@@ -90,7 +90,7 @@ export default function List() {
       id: 123,
       grade: 5,
       no: 123,
-      title: " Doortelen en terugtelen met spr...",
+      title: " Doortelen en terugtelen met sprongen van 3 of meer dan",
       pupils: [
         {
           completed: 16,
@@ -103,7 +103,7 @@ export default function List() {
       id: 201,
       grade: 5,
       no: 201,
-      title: "Splitsend vermenigvuldigen (6 x 32 =...)",
+      title: "Splitsend vermenigvuldigen (6 x 32 = 6837) En nog meer rek",
       pupils: [
         {
           completed: 3,
@@ -116,7 +116,7 @@ export default function List() {
       id: 123,
       grade: 5,
       no: 123,
-      title: " Doortelen en terugtelen met spr...",
+      title: " Doortelen en terugtelen met sprongen meer dan 1,2,4 en 6",
       pupils: [
         {
           completed: 3,
@@ -127,27 +127,23 @@ export default function List() {
     }
   ];
 
-  const [selectedGrade, setSelectedGrade] = useState("");
+  const [selectedGrade, setSelectedGrade] = useState(5);
 
   const mathGrades = allLearningObjs.map(mathGrade => mathGrade.grade);
-  console.log(mathGrades);
 
   const uniqueGrades = [...new Set(mathGrades)];
-  console.log(uniqueGrades);
 
   const learningObjs = allLearningObjs.filter(x => x.grade == selectedGrade);
-
-  console.log("LEARNING OBJS", learningObjs);
 
   return (
     <div className="main">
       <div className="controls">
         <div className="controls__group">
-          <ul class="controls__pills">
-            <li class="controls__pills__item active">
+          <ul className="controls__pills">
+            <li className="controls__pills__item active">
               <IconBalls />
             </li>
-            <li class="controls__pills__item">
+            <li className="controls__pills__item">
               <IconPerson />
             </li>
           </ul>
@@ -156,7 +152,6 @@ export default function List() {
               className="dropdown__custom-select"
               onChange={e => {
                 setSelectedGrade(e.target.value);
-                console.log("TARGET at select", e.target.value);
               }}
             >
               {uniqueGrades.map(uniqueGrade => {
@@ -185,8 +180,10 @@ export default function List() {
         <table className="table">
           <thead>
             <tr>
-              <th></th>
-              <th className="table__title">Learning Objective</th>
+              <th className="table__title">
+                Learning Objective
+                <IconDown />
+              </th>
               <th className="table__pupil">Pupils</th>
               <th className="table__button"></th>
             </tr>

@@ -11,6 +11,8 @@
   color: $primary;
   font-weight: weight(bold);
   font-family: "Quicksand", sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
 
   & svg {
     width: 20px;

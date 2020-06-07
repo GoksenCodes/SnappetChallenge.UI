@@ -50,30 +50,34 @@ body {
   color: $default;
   font-weight: weight(bold);
 
-  &__menu {
+  &__breadcrumb {
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
 
     &__item {
       display: inline;
       text-decoration: none;
-      color: $default;
+
+      a {
+        color: $default;
+        text-decoration: none;
+      }
     }
   }
   &__title {
     text-align: center;
 
-    &__icon {
+    & svg {
       width: 50px;
       height: 50px;
       display: inline-block;
-
-      path {
-        fill: #fff;
-      }
+      fill: #fff;
+      margin-right: 10px;
+      vertical-align: bottom;
     }
   }
 }
+
 .container {
   background: $default;
   width: 90%;
