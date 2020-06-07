@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import ListDetails from "./ListDetails";
+import balls from "../assets/icons/balls.svg";
+import person from "../assets/icons/person.svg";
 
 export default function List() {
   const allLearningObjs = [
@@ -136,22 +138,43 @@ export default function List() {
 
   return (
     <div className="main">
-      <h1>Learning Objectives Table</h1>
-      <select
-        className="custom-select"
-        onChange={e => {
-          setSelectedGrade(e.target.value);
-          console.log("TARGET at select", e.target.value);
-        }}
-      >
-        {uniqueGrades.map(uniqueGrade => {
-          return (
-            <option value={uniqueGrade} key={uniqueGrade} selected>
-              Math Grade {uniqueGrade}
-            </option>
-          );
-        })}
-      </select>
+      <div className="controls">
+        <ul class="controls__pills">
+          <li class="controls__pills__item active">
+            <img
+              className="controls__pills__item__icon"
+              src={balls}
+              alt="connected-balls-icon"
+            />
+          </li>
+          <li class="controls__pills__item">
+            <img
+              className="controls__pills__item__icon"
+              src={person}
+              alt="person-icon"
+            />
+          </li>
+        </ul>
+        <div className="dropdown">
+          <select
+            className="dropdown__custom-select"
+            onChange={e => {
+              setSelectedGrade(e.target.value);
+              console.log("TARGET at select", e.target.value);
+            }}
+          >
+            {uniqueGrades.map(uniqueGrade => {
+              return (
+                <option value={uniqueGrade} key={uniqueGrade} selected>
+                  Math Grade {uniqueGrade}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+        <button className="btn__primary">Add learning objective</button>
+        <button className="btn__warning">Automatic update</button>
+      </div>
       <div>
         <table className="table">
           <thead>

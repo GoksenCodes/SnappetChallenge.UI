@@ -1,0 +1,30 @@
+@import "./style/config";
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  text-align: center;
+
+  &__pills {
+    list-style: none;
+    display: inline-block;
+
+    &__item {
+      display: inline-block;
+      border: 1px solid $border-color;
+      background: $default;
+      padding: 5px;
+
+      &.active {
+        background: $light;
+      }
+
+      &__icon {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -9,12 +9,12 @@
 
   th {
     text-align: left;
-    border-bottom: 1px solid $light;
+    border-bottom: 1px solid $border-color;
   }
 
   td {
     font-weight: weight(bold);
-    border-bottom: 1px solid $light;
+    border-bottom: 1px solid $border-color;
   }
 
   &__id {
@@ -30,5 +30,7 @@
   }
   &__button {
     padding: 30px 0 30px 90px;
+    // display: flex;
+    // justify-content: right;
   }
 }

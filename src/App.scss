@@ -1,6 +1,9 @@
 @import "./style/config";
 @import "./style/reset";
 @import "./style/components/table";
+@import "./style/components/pilltabs";
+@import "./style/components/dropdown";
+@import "./style/components/button";
 
 @function weight($weight-name) {
   @return map-get($font-weight, $weight-name);
