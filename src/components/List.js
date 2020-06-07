@@ -130,24 +130,20 @@ export default function List() {
   const [selectedGrade, setSelectedGrade] = useState(5);
 
   const mathGrades = allLearningObjs.map(mathGrade => mathGrade.grade);
-  console.log(mathGrades);
 
   const uniqueGrades = [...new Set(mathGrades)];
-  console.log(uniqueGrades);
 
   const learningObjs = allLearningObjs.filter(x => x.grade == selectedGrade);
-
-  console.log("LEARNING OBJS", learningObjs);
 
   return (
     <div className="main">
       <div className="controls">
         <div className="controls__group">
-          <ul class="controls__pills">
-            <li class="controls__pills__item active">
+          <ul className="controls__pills">
+            <li className="controls__pills__item active">
               <IconBalls />
             </li>
-            <li class="controls__pills__item">
+            <li className="controls__pills__item">
               <IconPerson />
             </li>
           </ul>
@@ -156,7 +152,6 @@ export default function List() {
               className="dropdown__custom-select"
               onChange={e => {
                 setSelectedGrade(e.target.value);
-                console.log("TARGET at select", e.target.value);
               }}
             >
               {uniqueGrades.map(uniqueGrade => {
