@@ -1,0 +1,39 @@
+@import "./style/config";
+
+@function weight($weight-name) {
+  @return map-get($font-weight, $weight-name);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  font-weight: weight(bold);
+
+  th {
+    text-align: left;
+    border-bottom: 1px solid $border-color;
+  }
+
+  td {
+    font-weight: weight(bold);
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__id {
+    padding: 30px 3px 30px 0;
+  }
+
+  &__pupil {
+    padding: 30px 0 30px 50px;
+  }
+
+  &__title {
+    padding: 30px 0 30px 0;
+  }
+  &__button {
+    padding: 30px 0 30px 90px;
+    // display: flex;
+    // justify-content: right;
+  }
+}

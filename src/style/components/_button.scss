@@ -1,0 +1,33 @@
+@import "./style/config";
+
+.btn {
+  display: inline-block;
+  padding: 15px;
+  font-size: 1rem;
+  background: $default;
+  border: 1px solid $border-color;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  color: $primary;
+  font-weight: weight(bold);
+  font-family: "Quicksand", sans-serif;
+
+  & svg {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    fill: #fff;
+    margin-left: 5px;
+    vertical-align: bottom;
+  }
+
+  &__primary {
+    color: $default;
+    background: $primary;
+  }
+
+  &__warning {
+    color: $default;
+    background: $warning;
+  }
+}

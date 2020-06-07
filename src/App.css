@@ -6,6 +6,30 @@
   padding: 0;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+th,
+td {
+  border: none;
+}
+
+.App {
+  background: #f2f5f7;
+  min-height: 100vh;
+}
+
 body {
   color: #333333;
   font-family: "Quicksand", sans-serif;
@@ -27,7 +51,7 @@ body h1 {
 
 .navbar__menu {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .navbar__menu__item {
@@ -37,7 +61,6 @@ body h1 {
 }
 
 .navbar__title {
-  padding-top: 1rem;
   text-align: center;
 }
 
@@ -49,5 +72,17 @@ body h1 {
 
 .navbar__title__icon path {
   fill: #fff;
+}
+
+.container {
+  background: #ffffff;
+  width: 90%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  margin-top: -40px;
 }
 /*# sourceMappingURL=App.css.map */

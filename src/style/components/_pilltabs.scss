@@ -1,0 +1,30 @@
+@import "./style/config";
+
+.controls__pills {
+  list-style: none;
+
+  &__item {
+    display: inline-block;
+    border: 1px solid $border-color;
+    background: $default;
+    padding: 5px;
+    box-shadow: $box-shadow;
+
+    &:first-child {
+      border-radius: $border-radius 0 0 $border-radius;
+    }
+    &:last-child {
+      border-radius: 0 $border-radius $border-radius 0;
+    }
+
+    &.active {
+      background: $light;
+    }
+
+    & svg {
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+  }
+}

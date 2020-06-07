@@ -1,5 +1,10 @@
 @import "./style/config";
 @import "./style/reset";
+@import "./style/components/table";
+@import "./style/components/pilltabs";
+@import "./style/components/dropdown";
+@import "./style/components/button";
+@import "./style/components/pupil";
 
 @function weight($weight-name) {
   @return map-get($font-weight, $weight-name);
@@ -23,6 +28,10 @@
   }
 }
 
+.App {
+  background: $light;
+  min-height: 100vh;
+}
 body {
   color: $text-color;
   font-family: "Quicksand", sans-serif;
@@ -43,7 +52,7 @@ body {
 
   &__menu {
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 1rem;
 
     &__item {
       display: inline;
@@ -52,7 +61,6 @@ body {
     }
   }
   &__title {
-    padding-top: 1rem;
     text-align: center;
 
     &__icon {
@@ -65,4 +73,30 @@ body {
       }
     }
   }
+}
+.container {
+  background: $default;
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  margin-top: -40px;
+  padding: 30px;
+}
+
+.main {
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+
+  &__group {
+    display: flex;
+  }
+}
+
+.spacer {
+  margin-left: 10px;
 }

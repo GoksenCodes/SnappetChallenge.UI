@@ -1,0 +1,19 @@
+@import "./style/config";
+
+.pupil {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 3px;
+
+  &__inprogress {
+    background-color: #badff1;
+  }
+  &__completed {
+    background-color: $primary;
+  }
+  &__notstarted {
+    background-color: #fde342;
+  }
+}
