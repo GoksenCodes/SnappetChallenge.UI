@@ -133,7 +133,18 @@ export default function List() {
 
   const uniqueGrades = [...new Set(mathGrades)];
 
-  const learningObjs = allLearningObjs.filter(x => x.grade == selectedGrade);
+  const sortedUniqueGrades = uniqueGrades.sort();
+
+  const numberSelectedGrade = parseInt(selectedGrade);
+
+  const learningObjs = allLearningObjs.filter(
+    x => x.grade === numberSelectedGrade
+  );
+  // console.log(
+  //   "SELECTED GRADE",
+  //   typeof selectedGrade,
+  //   typeof numberSelectedGrade
+  // );
 
   return (
     <div className="main">
@@ -149,14 +160,15 @@ export default function List() {
           </ul>
           <div className="dropdown spacer">
             <select
+              defaultValue={5}
               className="dropdown__custom-select"
               onChange={e => {
                 setSelectedGrade(e.target.value);
               }}
             >
-              {uniqueGrades.map(uniqueGrade => {
+              {sortedUniqueGrades.map(uniqueGrade => {
                 return (
-                  <option value={uniqueGrade} key={uniqueGrade} selected>
+                  <option value={uniqueGrade} key={uniqueGrade}>
                     Math Grade {uniqueGrade}
                   </option>
                 );
