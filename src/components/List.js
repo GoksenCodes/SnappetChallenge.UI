@@ -133,6 +133,8 @@ export default function List() {
 
   const uniqueGrades = [...new Set(mathGrades)];
 
+  const sortedUniqueGrades = uniqueGrades.sort();
+
   const numberSelectedGrade = parseInt(selectedGrade);
 
   const learningObjs = allLearningObjs.filter(
@@ -164,7 +166,7 @@ export default function List() {
                 setSelectedGrade(e.target.value);
               }}
             >
-              {uniqueGrades.map(uniqueGrade => {
+              {sortedUniqueGrades.map(uniqueGrade => {
                 return (
                   <option value={uniqueGrade} key={uniqueGrade}>
                     Math Grade {uniqueGrade}
